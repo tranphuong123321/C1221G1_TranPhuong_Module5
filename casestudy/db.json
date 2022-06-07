@@ -1,5 +1,36 @@
 {
-  "customer": [],
+  "customer": [
+    {
+      "id": "11",
+      "code": "11",
+      "gender": "11",
+      "firstName": "11",
+      "lastName": "11",
+      "dob": "11",
+      "email": "11",
+      "phone": "11"
+    },
+    {
+      "id": "22",
+      "code": "22",
+      "gender": "22",
+      "firstName": "22",
+      "lastName": "22",
+      "dob": "22",
+      "email": "22",
+      "phone": "22"
+    },
+    {
+      "id": "33",
+      "code": "33",
+      "gender": "33",
+      "firstName": "33",
+      "lastName": "33",
+      "dob": "33",
+      "email": "33",
+      "phone": "33"
+    }
+  ],
   "posts": [
     {
       "id": 1,

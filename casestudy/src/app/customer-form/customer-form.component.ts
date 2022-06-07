@@ -40,6 +40,7 @@ export class CustomerFormComponent implements OnInit {
       }
     }
     this.serverHttp.addCustomer(newCustomer as Customer).subscribe ((data) => {
+      this.router.navigate(['customer']);
     });
   }
 }

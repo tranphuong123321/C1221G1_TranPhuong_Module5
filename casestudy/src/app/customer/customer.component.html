@@ -1,4 +1,4 @@
-<p>customer list</p>
+<h1 style="text-align: center">CUSTOMER LIST</h1>
 <div>
   <div>
   <button mat-button color="primary" (click)="addCustomer()" >them moi</button>
@@ -15,17 +15,21 @@
       <th>dob</th>
       <th>email</th>
       <th>phone</th>
+      <th>funtion</th>
     </tr>
-<!--    <tr *ngFor="let customer of customers">-->
-<!--      <td>{{student?.id}}</td>-->
-<!--      <td>{{student?.code}}</td>-->
-<!--      <td>{{student?.gender}}</td>-->
-<!--      <td>{{student?.firstName}}</td>-->
-<!--      <td>{{student?.lastName}}</td>-->
-<!--      <td>{{student?.dob}}</td>-->
-<!--      <td>{{student?.email}}</td>-->
-<!--      <td>{{student?.phone}}</td>-->
-<!--    </tr>-->
+    <tr *ngFor="let customer of customer">
+      <td>{{customer?.id}}</td>
+      <td>{{customer?.code}}</td>
+      <td>{{customer?.gender}}</td>
+      <td>{{customer?.firstName}}</td>
+      <td>{{customer?.lastName}}</td>
+      <td>{{customer?.dob}}</td>
+      <td>{{customer?.email}}</td>
+      <td>{{customer?.phone}}</td>
+      <td>
+<!--        <button mat-button color="primary" (click)="" >edit</button>-->
+      </td>
+    </tr>
   </table>
 </div>
 
