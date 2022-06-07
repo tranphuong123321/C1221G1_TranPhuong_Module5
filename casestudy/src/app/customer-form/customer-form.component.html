@@ -1,0 +1,78 @@
+<p>customer-form works!</p>
+<div class="container">
+  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+    <label>
+      ID:
+      <input type="text" class="form-control" formControlName="id" required />
+    </label>
+    <span *ngIf="customerForm.controls.id.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      Code:
+      <input type="text" class="form-control" formControlName="code" required />
+    </label>
+    <span *ngIf="customerForm.controls.code.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      gender:
+      <input type="text" class="form-control" formControlName="gender" required />
+    </label>
+    <span *ngIf="customerForm.controls.gender.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      firstName:
+      <input type="text" class="form-control" formControlName="firstName" required />
+    </label>
+    <span *ngIf="customerForm.controls.firstName.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      lastName:
+      <input type="text" class="form-control" formControlName="lastName" required />
+    </label>
+    <span *ngIf="customerForm.controls.lastName.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      dob:
+      <input type="text" class="form-control" formControlName="dob" required />
+    </label>
+    <span *ngIf="customerForm.controls.dob.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      email:
+      <input type="text" class="form-control" formControlName="email" required />
+    </label>
+    <span *ngIf="customerForm.controls.email.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      phone:
+      <input type="text" class="form-control" formControlName="phone" required />
+    </label>
+    <span *ngIf="customerForm.controls.phone.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!customerForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
