@@ -38,6 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ts.external.directory.path" value="D:\code gym\module5\bai_02\bai_tap\node_modules\typescript\lib" />
   </component>
   <component name="SvnConfiguration">
@@ -53,11 +54,22 @@
       <workItem from="1654588878379" duration="754000" />
       <workItem from="1654590273672" duration="71000" />
       <workItem from="1654591825154" duration="182000" />
+      <workItem from="1654614699220" duration="897000" />
+      <workItem from="1654650464926" duration="23000" />
+      <workItem from="1654650542644" duration="16000" />
+      <workItem from="1654651456693" duration="77000" />
+      <workItem from="1654651989884" duration="8000" />
+      <workItem from="1654652561280" duration="708000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -76,5 +88,9 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1654588955087" />
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1654650557033">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1654650557033" />
   </component>
 </project>
