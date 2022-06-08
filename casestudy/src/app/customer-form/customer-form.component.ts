@@ -13,13 +13,13 @@ import {Customer} from '../model/Customer';
 export class CustomerFormComponent implements OnInit {
   public customerForm = new FormGroup({
     id: new FormControl(''),
-    code: new FormControl(''),
+    name: new FormControl(''),
+    birthDay: new FormControl(''),
     gender: new FormControl(''),
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    dob: new FormControl(''),
+    idCard: new FormControl(''),
+    numberPhone: new FormControl(''),
     email: new FormControl(''),
-    phone: new FormControl(''),
+    customerType: new FormControl(''),
   });
 
   constructor(

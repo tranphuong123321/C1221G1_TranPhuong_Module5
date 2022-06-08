@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-facility',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class FacilityComponent implements OnInit {
   public facility = [];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
-
+  public addFacility() {
+    this.router.navigate(['facility-form']);
+  }
 }

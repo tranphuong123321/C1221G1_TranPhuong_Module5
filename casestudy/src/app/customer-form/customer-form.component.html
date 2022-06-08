@@ -1,7 +1,6 @@
 <p>customer-form works!</p>
 <div class="container">
   <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
-
     <label>
       ID:
       <input type="text" class="form-control" formControlName="id" required />
@@ -11,10 +10,18 @@
     </span>
     <br />
     <label>
-      Code:
-      <input type="text" class="form-control" formControlName="code" required />
+      name:
+      <input type="text" class="form-control" formControlName="name" required />
     </label>
-    <span *ngIf="customerForm.controls.code.invalid" class="errorMessage">
+    <span *ngIf="customerForm.controls.name.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+    <label>
+      birthDay:
+      <input type="text" class="form-control" formControlName="birthDay" required />
+    </label>
+    <span *ngIf="customerForm.controls.birthDay.invalid" class="errorMessage">
       * khong duoc de trong
     </span>
     <br />
@@ -25,28 +32,20 @@
     <span *ngIf="customerForm.controls.gender.invalid" class="errorMessage">
       * khong duoc de trong
     </span>
-    <br />
+    <br/>
     <label>
-      firstName:
-      <input type="text" class="form-control" formControlName="firstName" required />
+      idCard:
+      <input type="text" class="form-control" formControlName="idCard" required />
     </label>
-    <span *ngIf="customerForm.controls.firstName.invalid" class="errorMessage">
+    <span *ngIf="customerForm.controls.idCard.invalid" class="errorMessage">
       * khong duoc de trong
     </span>
     <br />
     <label>
-      lastName:
-      <input type="text" class="form-control" formControlName="lastName" required />
+      numberPhone:
+      <input type="text" class="form-control" formControlName="numberPhone" required />
     </label>
-    <span *ngIf="customerForm.controls.lastName.invalid" class="errorMessage">
-      * khong duoc de trong
-    </span>
-    <br />
-    <label>
-      dob:
-      <input type="text" class="form-control" formControlName="dob" required />
-    </label>
-    <span *ngIf="customerForm.controls.dob.invalid" class="errorMessage">
+    <span *ngIf="customerForm.controls.numberPhone.invalid" class="errorMessage">
       * khong duoc de trong
     </span>
     <br />
@@ -59,12 +58,14 @@
     </span>
     <br />
     <label>
-      phone:
-      <input type="text" class="form-control" formControlName="phone" required />
+      customerType:
+      <input type="text" class="form-control" formControlName="customerType" required />
     </label>
-    <span *ngIf="customerForm.controls.phone.invalid" class="errorMessage">
+    <span *ngIf="customerForm.controls.customerType.invalid" class="errorMessage">
       * khong duoc de trong
     </span>
+    <br />
+
     <br />
     <button
       type="submit"

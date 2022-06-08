@@ -1,31 +1,32 @@
 <h1 style="text-align: center">CUSTOMER LIST</h1>
 <div>
   <div>
-  <button mat-button color="primary" (click)="addCustomer()" >them moi</button>
+  <button mat-button color="primary" (click)="addCustomer()" >Create Customer</button>
   </div>
 
   <br/>
   <table id="customers" style="border-collapse: collapse;">
     <tr>
       <th>id</th>
-      <th>code</th>
+      <th>name</th>
+      <th>birthDay</th>
       <th>gender</th>
-      <th>firstName</th>
-      <th>lastName</th>
-      <th>dob</th>
+      <th>idCard</th>
+      <th>numberPhone</th>
       <th>email</th>
-      <th>phone</th>
-      <th>funtion</th>
+      <th>customerType</th>
+
     </tr>
     <tr *ngFor="let customer of customer">
       <td>{{customer?.id}}</td>
-      <td>{{customer?.code}}</td>
+      <td>{{customer?.name}}</td>
+      <td>{{customer?.birthDay}}</td>
       <td>{{customer?.gender}}</td>
-      <td>{{customer?.firstName}}</td>
-      <td>{{customer?.lastName}}</td>
-      <td>{{customer?.dob}}</td>
+      <td>{{customer?.idCard}}</td>
+      <td>{{customer?.numberPhone}}</td>
       <td>{{customer?.email}}</td>
-      <td>{{customer?.phone}}</td>
+      <td>{{customer?.customerType}}</td>
+
       <td>
 <!--        <button mat-button color="primary" (click)="" >edit</button>-->
       </td>

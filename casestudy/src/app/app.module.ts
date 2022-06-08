@@ -12,6 +12,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 
 import { FacilityComponent } from './facility/facility.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { FacilityFormComponent } from './facility-form/facility-form.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     CustomerComponent,
     ContractComponent,
     CustomerFormComponent,
-    FacilityComponent
+    FacilityComponent,
+    FacilityFormComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
