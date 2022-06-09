@@ -38,7 +38,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../casestudy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bai_03/bai_tap/angular-calculator-app" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\code gym\module5\bai_02\bai_tap\node_modules\prettier" />
     <property name="ts.external.directory.path" value="D:\code gym\module5\bai_02\bai_tap\node_modules\typescript\lib" />
   </component>
   <component name="SvnConfiguration">
@@ -63,6 +65,7 @@
       <workItem from="1654653999438" duration="22000" />
       <workItem from="1654654325103" duration="1560000" />
       <workItem from="1654655899958" duration="13000" />
+      <workItem from="1654737217231" duration="3694000" />
     </task>
     <servers />
   </component>
@@ -91,9 +94,9 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1654588955087" />
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1654655910859">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1654741081354">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1654655910859" />
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1654741081354" />
   </component>
 </project>
