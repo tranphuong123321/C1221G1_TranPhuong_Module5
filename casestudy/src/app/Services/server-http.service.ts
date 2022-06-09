@@ -57,4 +57,10 @@ export class ServerHttpService {
       .post<any>(url, data , this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+  public deleteCustomer(customerId: number) {
+    const url = `${this.REST_API_SERVER}/customer/` + customerId;
+    return this.httpClient
+      .delete<any>(url)
+      .pipe(catchError(this.handleError));
+  }
 }
