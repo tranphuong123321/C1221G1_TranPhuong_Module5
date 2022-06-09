@@ -1,0 +1,83 @@
+<p>contract-form works!</p>
+<div class="container">
+  <form [formGroup]="contractForm" (ngSubmit)="onSubmit()">
+    <!--  id: string;-->
+    <!--  code: string;-->
+    <!--  customer: string;-->
+    <!--  facility: string;-->
+    <!--  startDate: string;-->
+    <!--  endDate: string;-->
+    <!--  deposit: string;-->
+    <label>
+      ID:
+      <input type="text" class="form-control" formControlName="id" required />
+    </label>
+    <span *ngIf="contractForm.controls.id.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <label>
+      code:
+      <input type="text" class="form-control" formControlName="code" required />
+    </label>
+    <span *ngIf="contractForm.controls.code.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <label>
+      customer:
+      <input type="text" class="form-control" formControlName="customer" required />
+    </label>
+    <span *ngIf="contractForm.controls.customer.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <label>
+      facility:
+      <input type="text" class="form-control" formControlName="facility" required />
+    </label>
+    <span *ngIf="contractForm.controls.facility.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <label>
+      startDate:
+      <input type="text" class="form-control" formControlName="startDate" required />
+    </label>
+    <span *ngIf="contractForm.controls.startDate.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <label>
+      endDate:
+      <input type="text" class="form-control" formControlName="endDate" required />
+    </label>
+    <span *ngIf="contractForm.controls.endDate.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <label>
+      deposit:
+      <input type="text" class="form-control" formControlName="deposit" required />
+    </label>
+    <span *ngIf="contractForm.controls.deposit.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+    <br />
+
+    <br />
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!contractForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>

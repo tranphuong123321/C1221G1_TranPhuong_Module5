@@ -24,6 +24,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
+import { FacilityEditComponent } from './facility-edit/facility-edit.component';
+import { ContractFormComponent } from './contract-form/contract-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { MatInputModule } from '@angular/material/input';
     FacilityComponent,
     FacilityFormComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FacilityEditComponent,
+    ContractFormComponent
   ],
   imports: [
     BrowserModule,

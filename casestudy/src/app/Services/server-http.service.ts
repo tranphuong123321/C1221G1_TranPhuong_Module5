@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {throwError} from 'rxjs';
 import {Customer} from '../model/Customer';
 import {catchError} from 'rxjs/operators';
+import {Contract} from '../model/Contract';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,18 @@ export class ServerHttpService {
   }
   public addCustomer(data: Customer) {
     const url = `${this.REST_API_SERVER}/customer`;
+    return this.httpClient
+      .post<any>(url, data , this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+  public getContract() {
+    const url = `${this.REST_API_SERVER}/contract`;
+    return this.httpClient
+      .get<any>(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+  public addContract(data: Contract) {
+    const url = `${this.REST_API_SERVER}/contract`;
     return this.httpClient
       .post<any>(url, data , this.httpOptions)
       .pipe(catchError(this.handleError));

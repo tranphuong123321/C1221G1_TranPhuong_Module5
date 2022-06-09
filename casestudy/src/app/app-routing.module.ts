@@ -8,6 +8,8 @@ import {ContractComponent} from './contract/contract.component';
 import {FacilityComponent} from './facility/facility.component';
 import {CustomerFormComponent} from './customer-form/customer-form.component';
 import {FacilityFormComponent} from './facility-form/facility-form.component';
+import {FacilityEditComponent} from './facility-edit/facility-edit.component';
+import {ContractFormComponent} from './contract-form/contract-form.component';
 
 
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'customer-form', component: CustomerFormComponent},
   {path: 'facility', component: FacilityComponent},
   {path: 'contract', component: ContractComponent},
-  {path: 'facility-form', component: FacilityFormComponent}
+  {path: 'contract-form', component: ContractFormComponent},
+  {path: 'facility-form', component: FacilityFormComponent},
+  {path: 'facility-edit', component: FacilityEditComponent}
 ];
 
 @NgModule({
