@@ -4,6 +4,7 @@ import {throwError} from 'rxjs';
 import {Customer} from '../model/Customer';
 import {catchError} from 'rxjs/operators';
 import {Contract} from '../model/Contract';
+import {Facility} from '../model/Facility';
 
 @Injectable({
   providedIn: 'root'
@@ -61,6 +62,12 @@ export class ServerHttpService {
     const url = `${this.REST_API_SERVER}/customer/` + customerId;
     return this.httpClient
       .delete<any>(url)
+      .pipe(catchError(this.handleError));
+  }
+  public addFacility(data: Facility) {
+    const url = `${this.REST_API_SERVER}/facility`;
+    return this.httpClient
+      .post<any>(url, data , this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 }

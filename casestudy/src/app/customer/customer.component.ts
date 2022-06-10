@@ -32,7 +32,7 @@ private loadData() {
 
   public deleteCustomer(customerId) {
     this.serverHttp.deleteCustomer(customerId).subscribe((data) => {
-      this.loadData()
+      this.loadData();
     });
   }
 }

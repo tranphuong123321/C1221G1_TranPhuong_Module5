@@ -17,6 +17,7 @@ import {ContractFormComponent} from './contract-form/contract-form.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'customer', component: CustomerComponent},
   {path: 'customer-form', component: CustomerFormComponent},
   {path: 'facility', component: FacilityComponent},

@@ -1,53 +1,66 @@
 {
   "customer": [
     {
-      "id": "22",
-      "name": "22",
-      "birthDay": "22",
-      "gender": "22",
-      "idCard": "22",
-      "numberPhone": "22",
-      "email": "22",
-      "customerType": "22"
+      "id": "RR",
+      "name": "RR",
+      "birthDay": "RR",
+      "gender": "RR",
+      "idCard": "RR",
+      "numberPhone": "RR",
+      "email": "RR",
+      "customerType": "Silver"
     },
     {
-      "id": "qq",
-      "name": "qq",
-      "birthDay": "qq",
-      "gender": "qq",
-      "idCard": "qq",
-      "numberPhone": "qq",
-      "email": "qq",
-      "customerType": "qq"
+      "id": "ee",
+      "name": "ee",
+      "birthDay": "ee",
+      "gender": "ee",
+      "idCard": "ee",
+      "numberPhone": "ee",
+      "email": "ee",
+      "customerType": "Silver"
     },
     {
-      "id": "ss",
-      "name": "ss",
-      "birthDay": "ss",
-      "gender": "ss",
-      "idCard": "ss",
-      "numberPhone": "ss",
-      "email": "ss",
-      "customerType": "ss"
-    }
-  ],
-  "posts": [
+      "id": "rr",
+      "name": "rr",
+      "birthDay": "rr",
+      "gender": "rr",
+      "idCard": "rr",
+      "numberPhone": "rr",
+      "email": "rr",
+      "customerType": "Gold"
+    },
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": "yy",
+      "name": "yy",
+      "birthDay": "yy",
+      "gender": "yy",
+      "idCard": "yy",
+      "numberPhone": "yy",
+      "email": "yy",
+      "customerType": "Platinium"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "gg",
+      "name": "gg",
+      "birthDay": "gg",
+      "gender": "gg",
+      "idCard": "gg",
+      "numberPhone": "gg",
+      "email": "gg",
+      "customerType": "Gold"
+    },
+    {
+      "id": "hh",
+      "name": "hh",
+      "birthDay": "hh",
+      "gender": "hh",
+      "idCard": "hh",
+      "numberPhone": "hh",
+      "email": "hh",
+      "customerType": "Diamond"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  },
   "contract": [
     {
       "id": "ss",

@@ -60,7 +60,14 @@
     <br />
     <label>
       customerType:
-      <input type="text" class="form-control" formControlName="customerType" required />
+<!--      <input type="text" class="form-control" formControlName="customerType" required />-->
+      <select  ng-model="customerType" ng-options="item for item in items" formControlName="customerType" required>
+        <option value="Diamond" selected="customerType">Diamond</option>
+        <option value="Platinium" selected="customerType">Platinium</option>
+        <option value="Gold" selected="customerType">Gold</option>
+        <option value="Silver" selected="customerType">Silver</option>
+        <option value="Member" selected="customerType">Member</option>
+      </select>
     </label>
     <span *ngIf="customerForm.controls.customerType.invalid" class="errorMessage">
       * khong duoc de trong

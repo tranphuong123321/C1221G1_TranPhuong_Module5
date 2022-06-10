@@ -26,6 +26,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import { FacilityEditComponent } from './facility-edit/facility-edit.component';
 import { ContractFormComponent } from './contract-form/contract-form.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { ContractFormComponent } from './contract-form/contract-form.component';
     HeaderComponent,
     FooterComponent,
     FacilityEditComponent,
-    ContractFormComponent
+    ContractFormComponent,
+    CustomerEditComponent
   ],
   imports: [
     BrowserModule,

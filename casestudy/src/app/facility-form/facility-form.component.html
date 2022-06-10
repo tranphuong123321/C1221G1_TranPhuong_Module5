@@ -1,1 +1,75 @@
 <p>facility-form works!</p>
+<div class="container">
+<form [formGroup]="facilityForm" (ngSubmit)="onSubmit()">
+<!--  id: string;-->
+<!--  name: string;-->
+<!--  area: string;-->
+<!--  cost: string;-->
+<!--  maxPeople: string;-->
+<!--  rentType: string;-->
+  <label>
+    ID:
+    <input type="text" class="form-control" formControlName="id" required />
+  </label>
+  <span *ngIf="facilityForm.controls.id.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+  <br />
+
+  <label>
+    name:
+    <input type="text" class="form-control" formControlName="name" required />
+  </label>
+  <span *ngIf="facilityForm.controls.name.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+  <br />
+
+  <label>
+    area:
+    <input type="text" class="form-control" formControlName="area" required />
+  </label>
+  <span *ngIf="facilityForm.controls.area.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+  <br />
+
+  <label>
+    cost:
+    <input type="text" class="form-control" formControlName="cost" required />
+  </label>
+  <span *ngIf="facilityForm.controls.cost.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+  <br />
+
+  <label>
+    maxPeople:
+    <input type="text" class="form-control" formControlName="maxPeople" required />
+  </label>
+  <span *ngIf="facilityForm.controls.maxPeople.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+  <br />
+
+  <label>
+    rentType:
+    <input type="text" class="form-control" formControlName="rentType" required />
+  </label>
+  <span *ngIf="facilityForm.controls.rentType.invalid" class="errorMessage">
+      * khong duoc de trong
+    </span>
+  <br />
+
+
+
+  <br />
+  <button
+    type="submit"
+    class="btn btn-success"
+    [disabled]="!facilityForm.valid"
+  >
+    Submit
+  </button>
+</form>
+</div>
