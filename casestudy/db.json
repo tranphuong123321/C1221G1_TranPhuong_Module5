@@ -1,36 +1,6 @@
 {
   "customer": [
     {
-      "id": "RR",
-      "name": "RR",
-      "birthDay": "RR",
-      "gender": "RR",
-      "idCard": "RR",
-      "numberPhone": "RR",
-      "email": "RR",
-      "customerType": "Silver"
-    },
-    {
-      "id": "ee",
-      "name": "ee",
-      "birthDay": "ee",
-      "gender": "ee",
-      "idCard": "ee",
-      "numberPhone": "ee",
-      "email": "ee",
-      "customerType": "Silver"
-    },
-    {
-      "id": "rr",
-      "name": "rr",
-      "birthDay": "rr",
-      "gender": "rr",
-      "idCard": "rr",
-      "numberPhone": "rr",
-      "email": "rr",
-      "customerType": "Gold"
-    },
-    {
       "id": "yy",
       "name": "yy",
       "birthDay": "yy",
@@ -59,6 +29,26 @@
       "numberPhone": "hh",
       "email": "hh",
       "customerType": "Diamond"
+    },
+    {
+      "id": "pp",
+      "name": "pp",
+      "birthDay": "pp",
+      "gender": "pp",
+      "idCard": "pp",
+      "numberPhone": "pp",
+      "email": "pp",
+      "customerType": "Platinium"
+    },
+    {
+      "id": "tt",
+      "name": "tt",
+      "birthDay": "tt",
+      "gender": "Female",
+      "idCard": "tt",
+      "numberPhone": "tt",
+      "email": "tt",
+      "customerType": "Platinium"
     }
   ],
   "contract": [

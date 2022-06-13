@@ -1,4 +1,4 @@
-<p>customer-form works!</p>
+<H1 STYLE="text-align: center">ADD NEW CUSTOMER</H1>
 <div class="container">
 
   <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
@@ -7,7 +7,7 @@
       <input type="text" class="form-control" formControlName="id" required />
     </label>
     <span *ngIf="customerForm.controls.id.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
     <label>
@@ -15,7 +15,7 @@
       <input type="text" class="form-control" formControlName="name" required />
     </label>
     <span *ngIf="customerForm.controls.name.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
     <label>
@@ -23,15 +23,19 @@
       <input type="text" class="form-control" formControlName="birthDay" required />
     </label>
     <span *ngIf="customerForm.controls.birthDay.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
     <label>
       gender:
-      <input type="text" class="form-control" formControlName="gender" required />
+      <select  ng-model="gender" ng-options="item for item in items" formControlName="gender" required>
+        <option value="Male" selected="gender">Male</option>
+        <option value="Female" selected="gender">Female</option>
+        <option value="Other" selected="gender">Other</option>
+      </select>
     </label>
     <span *ngIf="customerForm.controls.gender.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br/>
     <label>
@@ -39,7 +43,7 @@
       <input type="text" class="form-control" formControlName="idCard" required />
     </label>
     <span *ngIf="customerForm.controls.idCard.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
     <label>
@@ -47,7 +51,7 @@
       <input type="text" class="form-control" formControlName="numberPhone" required />
     </label>
     <span *ngIf="customerForm.controls.numberPhone.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
     <label>
@@ -55,7 +59,7 @@
       <input type="text" class="form-control" formControlName="email" required />
     </label>
     <span *ngIf="customerForm.controls.email.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
     <label>
@@ -70,7 +74,7 @@
       </select>
     </label>
     <span *ngIf="customerForm.controls.customerType.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 

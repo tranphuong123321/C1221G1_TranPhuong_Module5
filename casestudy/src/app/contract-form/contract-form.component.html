@@ -1,4 +1,4 @@
-<p>contract-form works!</p>
+<H1 STYLE="text-align: center">ADD NEW CONTRACT</H1>
 <div class="container">
   <form [formGroup]="contractForm" (ngSubmit)="onSubmit()">
     <!--  id: string;-->
@@ -13,7 +13,7 @@
       <input type="text" class="form-control" formControlName="id" required />
     </label>
     <span *ngIf="contractForm.controls.id.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
@@ -22,7 +22,7 @@
       <input type="text" class="form-control" formControlName="code" required />
     </label>
     <span *ngIf="contractForm.controls.code.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
@@ -31,7 +31,7 @@
       <input type="text" class="form-control" formControlName="customer" required />
     </label>
     <span *ngIf="contractForm.controls.customer.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
@@ -40,7 +40,7 @@
       <input type="text" class="form-control" formControlName="facility" required />
     </label>
     <span *ngIf="contractForm.controls.facility.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
@@ -49,7 +49,7 @@
       <input type="text" class="form-control" formControlName="startDate" required />
     </label>
     <span *ngIf="contractForm.controls.startDate.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
@@ -58,7 +58,7 @@
       <input type="text" class="form-control" formControlName="endDate" required />
     </label>
     <span *ngIf="contractForm.controls.endDate.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
@@ -67,7 +67,7 @@
       <input type="text" class="form-control" formControlName="deposit" required />
     </label>
     <span *ngIf="contractForm.controls.deposit.invalid" class="errorMessage">
-      * khong duoc de trong
+      * cannot be left blank
     </span>
     <br />
 
