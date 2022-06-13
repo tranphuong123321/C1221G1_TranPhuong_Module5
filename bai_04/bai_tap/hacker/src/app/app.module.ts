@@ -8,13 +8,15 @@ import { FooterComponent } from './footer/footer.component';
 
 import {FormsModule} from "@angular/forms";
 import { ArticleComponent } from './article/article.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    ArticleComponent
+    ArticleComponent,
+    LikeComponent
   ],
     imports: [
         BrowserModule,
