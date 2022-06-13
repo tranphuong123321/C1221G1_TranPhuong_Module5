@@ -4,26 +4,29 @@
   <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
     <label>
       ID:
-      <input type="text" class="form-control" formControlName="id" required />
+      <input type="text" class="form-control" formControlName="id"  />
     </label>
-    <span *ngIf="customerForm.controls.id.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.id.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
     <br />
     <label>
       name:
-      <input type="text" class="form-control" formControlName="name" required />
+      <input type="text" class="form-control" formControlName="name"  />
     </label>
-    <span *ngIf="customerForm.controls.name.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.name.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
     <br />
     <label>
       birthDay:
-      <input type="text" class="form-control" formControlName="birthDay" required />
+      <input type="text" class="form-control" formControlName="birthDay"  />
     </label>
-    <span *ngIf="customerForm.controls.birthDay.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.birthDay.hasError('required')" class="errorMessage">
+      * Cannot be left blank
+    </span>
+    <span *ngIf="customerForm.controls.birthDay.hasError('pattern')" class="errorMessage">
+      * Malformed
     </span>
     <br />
     <label>
@@ -34,46 +37,55 @@
         <option value="Other" selected="gender">Other</option>
       </select>
     </label>
-    <span *ngIf="customerForm.controls.gender.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.gender.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
     <br/>
     <label>
       idCard:
-      <input type="text" class="form-control" formControlName="idCard" required />
+      <input type="text" class="form-control" formControlName="idCard"  />
     </label>
-    <span *ngIf="customerForm.controls.idCard.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.idCard.hasError('required')" class="errorMessage">
+      * Cannot be left blank
+    </span>
+    <span *ngIf="customerForm.controls.idCard.hasError('pattern')" class="errorMessage">
+      * Malformed
     </span>
     <br />
     <label>
       numberPhone:
-      <input type="text" class="form-control" formControlName="numberPhone" required />
+      <input type="text" class="form-control" formControlName="numberPhone"  />
     </label>
-    <span *ngIf="customerForm.controls.numberPhone.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.numberPhone.hasError('required')" class="errorMessage">
+      * Cannot be left blank
+    </span>
+    <span *ngIf="customerForm.controls.numberPhone.hasError('pattern')" class="errorMessage">
+      * Malformed
     </span>
     <br />
     <label>
       email:
-      <input type="text" class="form-control" formControlName="email" required />
+      <input type="text" class="form-control" formControlName="email"  />
     </label>
-    <span *ngIf="customerForm.controls.email.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.email.hasError('required')" class="errorMessage">
+      * Cannot be left blank
+    </span>
+    <span *ngIf="customerForm.controls.email.hasError('pattern')" class="errorMessage">
+      * Malformed
     </span>
     <br/>
     <label>
       address:
-      <input type="text" class="form-control" formControlName="address" required />
+      <input type="text" class="form-control" formControlName="address"  />
     </label>
-    <span *ngIf="customerForm.controls.address.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.address.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
     <br />
     <label>
       customerType:
 <!--      <input type="text" class="form-control" formControlName="customerType" required />-->
-      <select  ng-model="customerType" ng-options="item for item in items" formControlName="customerType" required>
+      <select  ng-model="customerType" ng-options="item for item in items" formControlName="customerType" >
         <option value="Diamond" selected="customerType">Diamond</option>
         <option value="Platinium" selected="customerType">Platinium</option>
         <option value="Gold" selected="customerType">Gold</option>
@@ -81,8 +93,8 @@
         <option value="Member" selected="customerType">Member</option>
       </select>
     </label>
-    <span *ngIf="customerForm.controls.customerType.invalid" class="errorMessage">
-      * cannot be left blank
+    <span *ngIf="customerForm.controls.customerType.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
     <br />
 
