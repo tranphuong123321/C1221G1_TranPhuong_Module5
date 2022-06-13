@@ -6,5 +6,6 @@ export interface Customer {
   idCard: string;
   numberPhone: string;
   email: string;
+  address: string;
   customerType: string;
 }

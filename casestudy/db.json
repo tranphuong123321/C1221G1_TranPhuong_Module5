@@ -1,54 +1,48 @@
 {
   "customer": [
     {
-      "id": "yy",
-      "name": "yy",
-      "birthDay": "yy",
-      "gender": "yy",
-      "idCard": "yy",
-      "numberPhone": "yy",
-      "email": "yy",
-      "customerType": "Platinium"
+      "id": "1",
+      "name": "Nguyễn Thị Hào",
+      "birthDay": "1970-11-07",
+      "gender": "Female",
+      "idCard": "643431213",
+      "numberPhone": "0945423362",
+      "email": "thihao07@gmail.com",
+      "address": "23 Nguyễn Hoàng,Đà Nẵng",
+      "customerType": "Member"
     },
     {
-      "id": "gg",
-      "name": "gg",
-      "birthDay": "gg",
-      "gender": "gg",
-      "idCard": "gg",
-      "numberPhone": "gg",
-      "email": "gg",
+      "id": "2",
+      "name": "Phạm Xuân Diệu",
+      "birthDay": "1992-08-08",
+      "gender": "Male",
+      "idCard": "865342123",
+      "numberPhone": "0954333333",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị",
       "customerType": "Gold"
     },
     {
-      "id": "hh",
-      "name": "hh",
-      "birthDay": "hh",
-      "gender": "hh",
-      "idCard": "hh",
-      "numberPhone": "hh",
-      "email": "hh",
+      "id": "3",
+      "name": "Trương Đình Nghệ",
+      "birthDay": "1990-02-27",
+      "gender": "Male",
+      "idCard": "488645199",
+      "numberPhone": "0373213122",
+      "email": "nghenhan2702@gmail.com",
+      "address": "K323/12 Ông Ích Khiêm, Vinh",
       "customerType": "Diamond"
     },
     {
-      "id": "pp",
-      "name": "pp",
-      "birthDay": "pp",
-      "gender": "pp",
-      "idCard": "pp",
-      "numberPhone": "pp",
-      "email": "pp",
-      "customerType": "Platinium"
-    },
-    {
-      "id": "tt",
-      "name": "tt",
-      "birthDay": "tt",
-      "gender": "Female",
-      "idCard": "tt",
-      "numberPhone": "tt",
-      "email": "tt",
-      "customerType": "Platinium"
+      "id": "4",
+      "name": "Dương Văn Quan",
+      "birthDay": "1981-07-08",
+      "gender": "Male",
+      "idCard": "543432111",
+      "numberPhone": "0490039241",
+      "email": "duongquan@gmail.com",
+      "address": "K453/12 Lê Lợi, Đà Nẵng",
+      "customerType": "Diamond"
     }
   ],
   "contract": [
@@ -78,6 +72,21 @@
       "startDate": "rr",
       "endDate": "rr",
       "deposit": "rr"
+    }
+  ],
+  "facility": [
+    {
+      "id": "11",
+      "name": "11",
+      "area": "11",
+      "cost": "11",
+      "maxPeople": "11",
+      "rentType": "11",
+      "romStandard": "",
+      "otherAamenities": "",
+      "poolArea": "",
+      "numberFloors": "",
+      "freeServiceIncluded": ""
     }
   ]
 }

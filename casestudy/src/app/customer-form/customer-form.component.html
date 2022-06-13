@@ -61,6 +61,14 @@
     <span *ngIf="customerForm.controls.email.invalid" class="errorMessage">
       * cannot be left blank
     </span>
+    <br/>
+    <label>
+      address:
+      <input type="text" class="form-control" formControlName="address" required />
+    </label>
+    <span *ngIf="customerForm.controls.address.invalid" class="errorMessage">
+      * cannot be left blank
+    </span>
     <br />
     <label>
       customerType:

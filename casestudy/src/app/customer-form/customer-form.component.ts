@@ -19,6 +19,7 @@ export class CustomerFormComponent implements OnInit {
     idCard: new FormControl(''),
     numberPhone: new FormControl(''),
     email: new FormControl(''),
+    address: new FormControl(''),
     customerType: new FormControl(''),
   });
 
