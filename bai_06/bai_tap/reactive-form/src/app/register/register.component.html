@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Học về Reactive Form</h1>
+  <h1>Form Đăng Ký</h1>
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 <!--    email, password, confirmPassword, country, age, gender, phone-->
     <label>
@@ -21,9 +21,9 @@
     <span *ngIf="profileForm.controls.password.hasError('required')" class="errorMessage">
       * Không được để trống
     </span>
-<!--    <span *ngIf="profileForm.controls.password.hasError('pattern')" class="errorMessage">-->
-<!--      * Không đúng định dạng-->
-<!--    </span>-->
+    <span *ngIf="profileForm.controls.password.hasError('pattern')" class="errorMessage">
+      * Không đúng định dạng
+    </span>
     <br />
 
     <label>
@@ -33,11 +33,14 @@
     <span *ngIf="profileForm.controls.confirmPassword.hasError('required')" class="errorMessage">
       * Không được để trống
     </span>
+    <span *ngIf="profileForm.hasError('passValid')" class="errorMessage">
+      * Phải giống password
+    </span>
     <br />
 
     <label>
       country:
-      <input type="text" formControlName="country" required />
+      <input type="text" formControlName="country"  />
     </label>
     <span *ngIf="profileForm.controls.country.hasError('required')" class="errorMessage">
       * Không được để trống
@@ -59,7 +62,13 @@
 
     <label>
       gender:
-      <input type="text" formControlName="gender"  />
+<!--      <input type="text" formControlName="gender"  />-->
+      <select  ng-model="gender" ng-options="item for item in items" formControlName="gender" required>
+        <option value="Nam" selected="gender">Nam</option>
+        <option value="Nu" selected="gender">Nu</option>
+        <option value="LGBT" selected="gender">LGBT</option>
+
+      </select>
     </label>
     <span *ngIf="profileForm.controls.gender.hasError('required')" class="errorMessage">
       * Không được để trống
