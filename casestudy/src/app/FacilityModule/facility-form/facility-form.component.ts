@@ -15,14 +15,14 @@ export class FacilityFormComponent implements OnInit {
   public facilityForm = new FormGroup({
     id: new FormControl('', [Validators.required]),
     name: new FormControl('', [Validators.required, Validators.pattern('')]),
-    area: new FormControl('', [Validators.required, Validators.pattern('[+]?\\\\d*\\\\.?\\\\d*')]),
+    area: new FormControl('', [Validators.required, Validators.pattern('[+]?\\d*\\.?\\d*')]),
     cost: new FormControl('', [Validators.required]),
     maxPeople: new FormControl('', [Validators.required]),
     rentType: new FormControl('', [Validators.required]),
     romStandard: new FormControl('', [Validators.required]),
     otherAamenities: new FormControl('', [Validators.required]),
     poolArea: new FormControl('', [Validators.required]),
-    numberFloors: new FormControl('', [Validators.required, Validators.pattern('[+]?\\\\d*\\\\.?\\\\d*')]),
+    numberFloors: new FormControl('', [Validators.required, Validators.pattern('[+]?\\d*\\.?\\d*')]),
     freeServiceIncluded: new FormControl('', [Validators.required]),
   });
 
