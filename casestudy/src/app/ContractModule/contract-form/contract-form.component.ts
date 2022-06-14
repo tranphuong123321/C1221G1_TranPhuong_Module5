@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ServerHttpService} from '../Services/server-http.service';
-import {CommonService} from '../Services/common.service';
+import {ServerHttpService} from '../../Services/server-http.service';
+import {CommonService} from '../../Services/common.service';
 import {Router} from '@angular/router';
 import {FormControl, FormGroup} from '@angular/forms';
 
-import {Contract} from '../model/Contract';
+import {Contract} from '../../Model/Contract';
 
 @Component({
   selector: 'app-contract-form',

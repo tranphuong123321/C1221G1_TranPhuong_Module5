@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {CommonService} from '../Services/common.service';
-import {ServerHttpService} from '../Services/server-http.service';
+import {CommonService} from '../../Services/common.service';
+import {ServerHttpService} from '../../Services/server-http.service';
 
 @Component({
   selector: 'app-contract',

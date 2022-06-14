@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {ServerHttpService} from '../Services/server-http.service';
-import {CommonService} from '../Services/common.service';
+import {ServerHttpService} from '../../Services/server-http.service';
+import {CommonService} from '../../Services/common.service';
 import {Router} from '@angular/router';
-import {Customer} from '../model/Customer';
+import {Customer} from '../../Model/Customer';
 
 @Component({
   selector: 'app-customer-form',

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Customer} from '../model/Customer';
-import {ServerHttpService} from '../Services/server-http.service';
-import {CommonService} from '../Services/common.service';
+import {Customer} from '../../Model/Customer';
+import {ServerHttpService} from '../../Services/server-http.service';
+import {CommonService} from '../../Services/common.service';
 import {Router} from '@angular/router';
-import {Facility} from '../model/Facility';
+import {Facility} from '../../Model/Facility';
 
 @Component({
   selector: 'app-facility-form',

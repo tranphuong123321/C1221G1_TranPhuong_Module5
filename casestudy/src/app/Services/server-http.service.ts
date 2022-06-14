@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {throwError} from 'rxjs';
-import {Customer} from '../model/Customer';
+import {Customer} from '../Model/Customer';
 import {catchError} from 'rxjs/operators';
-import {Contract} from '../model/Contract';
-import {Facility} from '../model/Facility';
+import {Contract} from '../Model/Contract';
+import {Facility} from '../Model/Facility';
 
 @Injectable({
   providedIn: 'root'

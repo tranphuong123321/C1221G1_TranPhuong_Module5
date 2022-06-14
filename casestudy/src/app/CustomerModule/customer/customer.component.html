@@ -32,7 +32,7 @@
       <td>{{customer?.address}}</td>
       <td>{{customer?.customerType}}</td>
       <td>
-        <button type="button" class="btn btn-primary">edit</button> &nbsp;
+        <button type="button" class="btn btn-primary"><a [routerLink]="['/edit',customer.id]">Edit</a></button> &nbsp;
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="deleteCustomer(customer.id)"  >DELETE</button>
       </td>
     </tr>
