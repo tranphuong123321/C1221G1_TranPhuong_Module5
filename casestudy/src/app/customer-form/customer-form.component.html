@@ -11,6 +11,17 @@
     </span>
     <br />
     <label>
+      Code:
+      <input type="text" class="form-control" formControlName="code"  />
+    </label>
+    <span *ngIf="customerForm.controls.code.hasError('required')" class="errorMessage">
+      * Cannot be left blank
+    </span>
+    <span *ngIf="customerForm.controls.code.hasError('pattern')" class="errorMessage">
+      * Malformed (KH-XXXX)
+    </span>
+    <br />
+    <label>
       name:
       <input type="text" class="form-control" formControlName="name"  />
     </label>
@@ -20,7 +31,7 @@
     <br />
     <label>
       birthDay:
-      <input type="text" class="form-control" formControlName="birthDay"  />
+      <input type="date" class="form-control" formControlName="birthDay"  />
     </label>
     <span *ngIf="customerForm.controls.birthDay.hasError('required')" class="errorMessage">
       * Cannot be left blank

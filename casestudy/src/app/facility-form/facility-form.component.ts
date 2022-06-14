@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Customer} from '../model/Customer';
 import {ServerHttpService} from '../Services/server-http.service';
 import {CommonService} from '../Services/common.service';
@@ -13,17 +13,17 @@ import {Facility} from '../model/Facility';
 })
 export class FacilityFormComponent implements OnInit {
   public facilityForm = new FormGroup({
-    id: new FormControl(''),
-    name: new FormControl(''),
-    area: new FormControl(''),
-    cost: new FormControl(''),
-    maxPeople: new FormControl(''),
-    rentType: new FormControl(''),
-    romStandard: new FormControl(''),
-    otherAamenities: new FormControl(''),
-    poolArea: new FormControl(''),
-    numberFloors: new FormControl(''),
-    freeServiceIncluded: new FormControl(''),
+    id: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required, Validators.pattern('')]),
+    area: new FormControl('', [Validators.required, Validators.pattern('[+]?\\\\d*\\\\.?\\\\d*')]),
+    cost: new FormControl('', [Validators.required]),
+    maxPeople: new FormControl('', [Validators.required]),
+    rentType: new FormControl('', [Validators.required]),
+    romStandard: new FormControl('', [Validators.required]),
+    otherAamenities: new FormControl('', [Validators.required]),
+    poolArea: new FormControl('', [Validators.required]),
+    numberFloors: new FormControl('', [Validators.required, Validators.pattern('[+]?\\\\d*\\\\.?\\\\d*')]),
+    freeServiceIncluded: new FormControl('', [Validators.required]),
   });
 
   constructor(

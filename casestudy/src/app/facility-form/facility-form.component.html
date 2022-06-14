@@ -1,75 +1,74 @@
 <p>facility-form works!</p>
 <div class="container">
-<form [formGroup]="facilityForm" (ngSubmit)="onSubmit()">
-<!--  id: string;-->
-<!--  name: string;-->
-<!--  area: string;-->
-<!--  cost: string;-->
-<!--  maxPeople: string;-->
-<!--  rentType: string;-->
-  <label>
-    ID:
-    <input type="text" class="form-control" formControlName="id" required />
-  </label>
-  <span *ngIf="facilityForm.controls.id.invalid" class="errorMessage">
-      * khong duoc de trong
+  <form [formGroup]="facilityForm" (ngSubmit)="onSubmit()">
+    <!--  id: string;-->
+    <!--  name: string;-->
+    <!--  area: string;-->
+    <!--  cost: string;-->
+    <!--  maxPeople: string;-->
+    <!--  rentType: string;-->
+    <label>
+      ID:
+      <input type="text" class="form-control" formControlName="id"/>
+    </label>
+    <span *ngIf="facilityForm.controls.id.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
-  <br />
+    <br/>
 
-  <label>
-    name:
-    <input type="text" class="form-control" formControlName="name" required />
-  </label>
-  <span *ngIf="facilityForm.controls.name.invalid" class="errorMessage">
-      * khong duoc de trong
+    <label>
+      name:
+      <input type="text" class="form-control" formControlName="name" />
+    </label>
+    <span *ngIf="facilityForm.controls.name.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
-  <br />
+    <br/>
 
-  <label>
-    area:
-    <input type="text" class="form-control" formControlName="area" required />
-  </label>
-  <span *ngIf="facilityForm.controls.area.invalid" class="errorMessage">
-      * khong duoc de trong
+    <label>
+      area:
+      <input type="text" class="form-control" formControlName="area" />
+    </label>
+    <span *ngIf="facilityForm.controls.area.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
-  <br />
+    <br/>
 
-  <label>
-    cost:
-    <input type="text" class="form-control" formControlName="cost" required />
-  </label>
-  <span *ngIf="facilityForm.controls.cost.invalid" class="errorMessage">
-      * khong duoc de trong
+    <label>
+      cost:
+      <input type="text" class="form-control" formControlName="cost" />
+    </label>
+    <span *ngIf="facilityForm.controls.cost.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
-  <br />
+    <br/>
 
-  <label>
-    maxPeople:
-    <input type="text" class="form-control" formControlName="maxPeople" required />
-  </label>
-  <span *ngIf="facilityForm.controls.maxPeople.invalid" class="errorMessage">
-      * khong duoc de trong
+    <label>
+      maxPeople:
+      <input type="text" class="form-control" formControlName="maxPeople" />
+    </label>
+    <span *ngIf="facilityForm.controls.maxPeople.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
-  <br />
+    <br/>
 
-  <label>
-    rentType:
-    <input type="text" class="form-control" formControlName="rentType" required />
-  </label>
-  <span *ngIf="facilityForm.controls.rentType.invalid" class="errorMessage">
-      * khong duoc de trong
+    <label>
+      rentType:
+      <input type="text" class="form-control" formControlName="rentType" />
+    </label>
+    <span *ngIf="facilityForm.controls.rentType.hasError('required')" class="errorMessage">
+      * Cannot be left blank
     </span>
-  <br />
+    <br/>
 
 
-
-  <br />
-  <button
-    type="submit"
-    class="btn btn-success"
-    [disabled]="!facilityForm.valid"
-  >
-    Submit
-  </button>
-</form>
+    <br/>
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!facilityForm.valid"
+    >
+      Submit
+    </button>
+  </form>
 </div>

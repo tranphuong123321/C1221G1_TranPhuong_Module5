@@ -13,11 +13,12 @@ import {Customer} from '../model/Customer';
 export class CustomerFormComponent implements OnInit {
   public customerForm = new FormGroup({
     id: new FormControl('', [Validators.required]),
+    code: new FormControl('', [Validators.required, Validators.pattern('KH-\\d{4}')]),
     name: new FormControl('', [Validators.required]),
     birthDay: new FormControl('', [Validators.required, Validators.pattern('^\\d{4}\\-\\d{2}\\-\\d{2}$')]),
     gender: new FormControl('', [Validators.required]),
     idCard: new FormControl('', [Validators.required, Validators.pattern('\\d{9}')]),
-    numberPhone: new FormControl('', [Validators.required, Validators.pattern('\\d{10}')]),
+    numberPhone: new FormControl('', [Validators.required, Validators.pattern('((\\(84\\)\\+(90))|(\\(84\\)\\+(91))|(090)|(091))\\d{7}')]),
     email: new FormControl('', [Validators.required, Validators.pattern('^([a-z]\\w+@[a-z]{2,}\\.)\\w{2,10}(\\.\\w{2,3})?$')]),
     address: new FormControl('', [Validators.required]),
     customerType: new FormControl('', [Validators.required]),
