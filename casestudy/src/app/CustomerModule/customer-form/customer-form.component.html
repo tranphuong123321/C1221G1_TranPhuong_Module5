@@ -22,7 +22,7 @@
     </span>
     <br />
     <label>
-      name:
+      Name:
       <input type="text" class="form-control" formControlName="name"  />
     </label>
     <span *ngIf="customerForm.controls.name.hasError('required')" class="errorMessage">
@@ -30,7 +30,7 @@
     </span>
     <br />
     <label>
-      birthDay:
+      Birth Day:
       <input type="date" class="form-control" formControlName="birthDay"  />
     </label>
     <span *ngIf="customerForm.controls.birthDay.hasError('required')" class="errorMessage">
@@ -40,20 +40,29 @@
       * Malformed
     </span>
     <br />
-    <label>
-      gender:
-      <select  ng-model="gender" ng-options="item for item in items" formControlName="gender" required>
-        <option value="Male" selected="gender">Male</option>
-        <option value="Female" selected="gender">Female</option>
-        <option value="Other" selected="gender">Other</option>
+<!--    <label>-->
+<!--      Gender:-->
+<!--      <select  ng-model="gender" ng-options="item for item in items" formControlName="gender" required>-->
+<!--        <option value="Male" selected="gender">Male</option>-->
+<!--        <option value="Female" selected="gender">Female</option>-->
+<!--        <option value="Other" selected="gender">Other</option>-->
+<!--      </select>-->
+<!--    </label>-->
+
+
+      <label for="exampleFormControlSelect1">Gender</label>
+      <select class="form-control" id="gender" >
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
       </select>
-    </label>
+
     <span *ngIf="customerForm.controls.gender.hasError('required')" class="errorMessage">
       * Cannot be left blank
     </span>
     <br/>
     <label>
-      idCard:
+      Id Card:
       <input type="text" class="form-control" formControlName="idCard"  />
     </label>
     <span *ngIf="customerForm.controls.idCard.hasError('required')" class="errorMessage">
@@ -64,7 +73,7 @@
     </span>
     <br />
     <label>
-      numberPhone:
+      Number Phone:
       <input type="text" class="form-control" formControlName="numberPhone"  />
     </label>
     <span *ngIf="customerForm.controls.numberPhone.hasError('required')" class="errorMessage">
@@ -75,7 +84,7 @@
     </span>
     <br />
     <label>
-      email:
+      Email:
       <input type="text" class="form-control" formControlName="email"  />
     </label>
     <span *ngIf="customerForm.controls.email.hasError('required')" class="errorMessage">
@@ -86,24 +95,35 @@
     </span>
     <br/>
     <label>
-      address:
+      Address:
       <input type="text" class="form-control" formControlName="address"  />
     </label>
     <span *ngIf="customerForm.controls.address.hasError('required')" class="errorMessage">
       * Cannot be left blank
     </span>
     <br />
-    <label>
-      customerType:
-<!--      <input type="text" class="form-control" formControlName="customerType" required />-->
-      <select  ng-model="customerType" ng-options="item for item in items" formControlName="customerType" >
-        <option value="Diamond" selected="customerType">Diamond</option>
-        <option value="Platinium" selected="customerType">Platinium</option>
-        <option value="Gold" selected="customerType">Gold</option>
-        <option value="Silver" selected="customerType">Silver</option>
-        <option value="Member" selected="customerType">Member</option>
+<!--    <label>-->
+<!--      Customer Type:-->
+<!--      <select  ng-model="customerType" ng-options="item for item in items" formControlName="customerType" >-->
+<!--        <option value="Diamond" selected="customerType">Diamond</option>-->
+<!--        <option value="Platinium" selected="customerType">Platinium</option>-->
+<!--        <option value="Gold" selected="customerType">Gold</option>-->
+<!--        <option value="Silver" selected="customerType">Silver</option>-->
+<!--        <option value="Member" selected="customerType">Member</option>-->
+<!--      </select>-->
+<!--    </label>-->
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Customer Type</label>
+      <select class="form-control" id="exampleFormControlSelect1" >
+        <option>Diamond</option>
+        <option>Platinium</option>
+        <option>Gold</option>
+        <option>Silver</option>
+        <option>Member</option>
       </select>
-    </label>
+    </div>
+
     <span *ngIf="customerForm.controls.customerType.hasError('required')" class="errorMessage">
       * Cannot be left blank
     </span>
