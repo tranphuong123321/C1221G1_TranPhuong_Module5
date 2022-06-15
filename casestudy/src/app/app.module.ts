@@ -27,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FacilityEditComponent } from './FacilityModule/facility-edit/facility-edit.component';
 import { ContractFormComponent } from './ContractModule/contract-form/contract-form.component';
 import { CustomerEditComponent } from './CustomerModule/customer-edit/customer-edit.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { CustomerEditComponent } from './CustomerModule/customer-edit/customer-e
     MatListModule,
     MatButtonModule,
     MatBadgeModule,
-    MatInputModule
+    MatInputModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

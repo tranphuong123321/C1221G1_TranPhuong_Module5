@@ -23,26 +23,16 @@
       "customerType": "Gold"
     },
     {
-      "id": "3",
-      "name": "Trương Đình Nghệ",
-      "birthDay": "1990-02-27",
-      "gender": "Male",
-      "idCard": "488645199",
-      "numberPhone": "0373213122",
-      "email": "nghenhan2702@gmail.com",
-      "address": "K323/12 Ông Ích Khiêm, Vinh",
-      "customerType": "Diamond"
-    },
-    {
       "id": "4",
-      "name": "Dương Văn Quan",
-      "birthDay": "1981-07-08",
+      "code": "KH-4321",
+      "name": "Nguyễn Văn A",
+      "birthDay": "1990-01-01",
       "gender": "Male",
-      "idCard": "543432111",
-      "numberPhone": "0490039241",
-      "email": "duongquan@gmail.com",
-      "address": "K453/12 Lê Lợi, Đà Nẵng",
-      "customerType": "Diamond"
+      "idCard": "987654321",
+      "numberPhone": "0901234567",
+      "email": "a2022@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": "Gold"
     }
   ],
   "contract": [

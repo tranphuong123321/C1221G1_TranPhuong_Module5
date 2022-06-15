@@ -10,6 +10,7 @@ import {ServerHttpService} from '../../Services/server-http.service';
 })
 export class CustomerComponent implements OnInit {
   public customer = [];
+  p = 1;
 
   constructor(
     private common: CommonService,

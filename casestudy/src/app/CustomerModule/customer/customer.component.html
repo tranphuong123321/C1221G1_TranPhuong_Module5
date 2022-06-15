@@ -1,8 +1,8 @@
 <h1 style="text-align: center">CUSTOMER LIST</h1>
 
 <div>
-  <div >
-  <button type="button" class="btn btn-primary"  (click)="addCustomer()" >Create Customer</button>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="addCustomer()">Create Customer</button>
   </div>
 
   <br/>
@@ -20,7 +20,7 @@
       <th>customerType</th>
       <th>action</th>
     </tr>
-    <tr *ngFor="let customer of customer">
+    <tr *ngFor="let customer of customer | paginate : { itemsPerPage: 2, currentPage: p }">
       <td>{{customer?.id}}</td>
       <td>{{customer?.code}}</td>
       <td>{{customer?.name}}</td>
@@ -33,21 +33,18 @@
       <td>{{customer?.customerType}}</td>
       <td>
         <button type="button" class="btn btn-primary"><a [routerLink]="['/edit',customer.id]">Edit</a></button> &nbsp;
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="deleteCustomer(customer.id)"  >DELETE</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                (click)="deleteCustomer(customer.id)">DELETE
+        </button>
       </td>
     </tr>
   </table>
 </div>
+<div style="justify-content: space-around;display: flex;">
+  <pagination-controls (pageChange)="p = $event" class=" page-item"></pagination-controls>
+</div>
 
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,7 +61,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-        <button type="button" class="btn btn-primary" >DELETE</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">DELETE</button>
       </div>
     </div>
   </div>
