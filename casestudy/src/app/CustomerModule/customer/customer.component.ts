@@ -11,6 +11,8 @@ import {ServerHttpService} from '../../Services/server-http.service';
 export class CustomerComponent implements OnInit {
   public customer = [];
   p = 1;
+  idToDelete: number;
+  nameToDelete: string;
 
   constructor(
     private common: CommonService,
@@ -31,9 +33,14 @@ private loadData() {
     this.router.navigate(['customer-form']);
   }
 
-  public deleteCustomer(customerId) {
-    this.serverHttp.deleteCustomer(customerId).subscribe((data) => {
+  public deleteCustomer() {
+    this.serverHttp.deleteCustomer(this.idToDelete).subscribe((data) => {
       this.loadData();
     });
+  }
+
+  showMess(id: any, name: any) {
+    this.idToDelete = id;
+    this.nameToDelete = name;
   }
 }

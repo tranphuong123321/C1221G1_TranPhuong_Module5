@@ -2,37 +2,15 @@
   "customer": [
     {
       "id": "1",
-      "name": "Nguyễn Thị Hào",
-      "birthDay": "1970-11-07",
-      "gender": "Female",
-      "idCard": "643431213",
-      "numberPhone": "0945423362",
-      "email": "thihao07@gmail.com",
-      "address": "23 Nguyễn Hoàng,Đà Nẵng",
-      "customerType": "Member"
-    },
-    {
-      "id": "2",
-      "name": "Phạm Xuân Diệu",
-      "birthDay": "1992-08-08",
-      "gender": "Male",
-      "idCard": "865342123",
-      "numberPhone": "0954333333",
-      "email": "xuandieu92@gmail.com",
-      "address": "K77/22 Thái Phiên, Quảng Trị",
-      "customerType": "Gold"
-    },
-    {
-      "id": "4",
-      "code": "KH-4321",
-      "name": "Nguyễn Văn A",
+      "code": "KH-1234",
+      "name": "gfgfg",
       "birthDay": "1990-01-01",
-      "gender": "Male",
-      "idCard": "987654321",
+      "gender": "",
+      "idCard": "123456789",
       "numberPhone": "0901234567",
-      "email": "a2022@gmail.com",
-      "address": "Đà Nẵng",
-      "customerType": "Gold"
+      "email": "fgfg2@gmail.com",
+      "address": "đà nẵng",
+      "customerType": ""
     }
   ],
   "contract": [
