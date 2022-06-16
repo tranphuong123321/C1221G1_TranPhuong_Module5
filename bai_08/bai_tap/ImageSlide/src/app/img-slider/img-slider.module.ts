@@ -7,10 +7,14 @@ import { ImgSlideComponent } from './img-slide/img-slide.component';
 
 
 @NgModule({
-  declarations: [ImgSliderComponent, ImgSlideComponent],
-  imports: [
-    CommonModule,
-    ImgSliderRoutingModule
-  ]
+    declarations: [ImgSliderComponent, ImgSlideComponent],
+  exports: [
+    ImgSliderComponent,
+    ImgSlideComponent
+  ],
+    imports: [
+        CommonModule,
+        ImgSliderRoutingModule
+    ]
 })
 export class ImgSliderModule { }
