@@ -11,14 +11,14 @@ import {CategoryDeleteComponent} from './category/category-delete/category-delet
 
 
 const routes: Routes = [
-  {path: 'product-list', component: ProductListComponent},
-  {path: 'product-create', component: ProductCreateComponent},
-  {path: 'product-edit/:id', component: ProductEditComponent},
-  {path: 'product-delete/:id', component: ProductDeleteComponent},
-  {path: 'category-list', component: CategoryListComponent},
-  {path: 'category-create', component: CategoryCreateComponent},
-  {path: 'category-edit/:id', component: CategoryEditComponent},
-  {path: 'category-delete/:id', component: CategoryDeleteComponent},
+  {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
+  },
+  {
+    path: 'category',
+    loadChildren: () => import('./category/category.module').then(module => module.CategoryModule)
+  }
 ];
 
 @NgModule({

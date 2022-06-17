@@ -1,1 +1,100 @@
-<p>customer-edit works!</p>
+<H1 STYLE="text-align: center">ADD NEW CUSTOMER</H1>
+<div class="container">
+
+  <form [formGroup]="customerForm" (ngSubmit)="updateCustomer(id)">
+    <label>
+      ID:
+      <input type="text" class="form-control" formControlName="id"  />
+    </label>
+    <br />
+    <label>
+      Code:
+      <input type="text" class="form-control" formControlName="code"  />
+    </label>
+
+    <br />
+    <label>
+      Name:
+      <input type="text" class="form-control" formControlName="name"  />
+    </label>
+
+    <br />
+    <label>
+      Birth Day:
+      <input type="date" class="form-control" formControlName="birthDay"  />
+    </label>
+
+    <br />
+    <!--    <label>-->
+    <!--      Gender:-->
+    <!--      <select  ng-model="gender" ng-options="item for item in items" formControlName="gender" required>-->
+    <!--        <option value="Male" selected="gender">Male</option>-->
+    <!--        <option value="Female" selected="gender">Female</option>-->
+    <!--        <option value="Other" selected="gender">Other</option>-->
+    <!--      </select>-->
+    <!--    </label>-->
+
+
+    <label for="exampleFormControlSelect1">Gender</label>
+    <select class="form-control" id="gender" ng-model="gender" ng-options="item for item in items" formControlName="gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+
+    <br/>
+    <label>
+      Id Card:
+      <input type="text" class="form-control" formControlName="idCard"  />
+    </label>
+
+    <br />
+    <label>
+      Number Phone:
+      <input type="text" class="form-control" formControlName="numberPhone"  />
+    </label>
+    <span *ngIf="customerForm.controls.numberPhone.hasError('required')" class="errorMessage">
+      * Cannot be left blank
+    </span>
+    <span *ngIf="customerForm.controls.numberPhone.hasError('pattern')" class="errorMessage">
+      * Malformed
+    </span>
+    <br />
+    <label>
+      Email:
+      <input type="text" class="form-control" formControlName="email"  />
+    </label>
+
+    <br/>
+    <label>
+      Address:
+      <input type="text" class="form-control" formControlName="address"  />
+    </label>
+
+    <br />
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Customer Type</label>
+      <select class="form-control" id="exampleFormControlSelect1" ng-model="customerType" ng-options="item for item in items" formControlName="customerType" >
+        <option>Diamond</option>
+        <option>Platinium</option>
+        <option>Gold</option>
+        <option>Silver</option>
+        <option>Member</option>
+      </select>
+    </div>
+
+
+    <br />
+
+    <br />
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!customerForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>

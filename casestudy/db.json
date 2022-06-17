@@ -3,14 +3,50 @@
     {
       "id": "1",
       "code": "KH-1234",
-      "name": "gfgfg",
+      "name": "jonh",
       "birthDay": "1990-01-01",
       "gender": "",
       "idCard": "123456789",
       "numberPhone": "0901234567",
-      "email": "fgfg2@gmail.com",
-      "address": "đà nẵng",
+      "email": "g2@gmail.com",
+      "address": "da nang",
       "customerType": ""
+    },
+    {
+      "id": "2",
+      "code": "KH-1244",
+      "name": "messi",
+      "birthDay": "1990-01-01",
+      "gender": "",
+      "idCard": "123456788",
+      "numberPhone": "0901234568",
+      "email": "m2@gmail.com",
+      "address": "da nang",
+      "customerType": ""
+    },
+    {
+      "id": "3",
+      "code": "KH-1212",
+      "name": "ee",
+      "birthDay": "1990-11-11",
+      "gender": "Female",
+      "idCard": "123654789",
+      "numberPhone": "0901236548",
+      "email": "e2@gmail.com",
+      "address": "da nang",
+      "customerType": ""
+    },
+    {
+      "id": "5",
+      "code": "KH-4444",
+      "name": "dsdsd",
+      "birthDay": "1991-01-01",
+      "gender": "Female",
+      "idCard": "123654789",
+      "numberPhone": "0907777777",
+      "email": "d2323@gmail.com",
+      "address": "dd",
+      "customerType": "Diamond"
     }
   ],
   "contract": [

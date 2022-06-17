@@ -27,6 +27,25 @@
         "id": "1"
       },
       "id": 2
+    },
+    {
+      "name": "rrrr",
+      "price": 12,
+      "description": "rrrr",
+      "category": {
+        "id": "1"
+      },
+      "id": 3
+    },
+    {
+      "name": "dettr",
+      "price": 123,
+      "description": "nghhia",
+      "category": {
+        "name": "lap top ",
+        "id": 1
+      },
+      "id": 4
     }
   ],
   "posts": [

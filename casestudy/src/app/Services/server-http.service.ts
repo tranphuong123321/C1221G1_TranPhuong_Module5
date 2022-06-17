@@ -70,4 +70,10 @@ export class ServerHttpService {
       .post<any>(url, data , this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+  public updateCustomer(customerId: number) {
+    const url = `${this.REST_API_SERVER}/customer/` + customerId;
+    return this.httpClient
+      .put<Customer>(url)
+      .pipe(catchError(this.handleError));
+  }
 }

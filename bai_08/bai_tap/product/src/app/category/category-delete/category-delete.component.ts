@@ -17,7 +17,11 @@ export class CategoryDeleteComponent implements OnInit {
               private activatedRoute: ActivatedRoute) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
-      this.getCategory(this.id);
+      const category = this.getCategory(this.id);
+      this.categoryForm = new FormGroup({
+        id: new FormControl(category.id),
+        name: new FormControl(category.name),
+      });
     });
   }
 
@@ -25,18 +29,11 @@ export class CategoryDeleteComponent implements OnInit {
   }
 
   getCategory(id: number) {
-    return this.categoryService.findById(id).subscribe(category => {
-      this.categoryForm = new FormGroup({
-        name: new FormControl(category.name),
-      });
-    });
+    return this.categoryService.findById(id);
   }
 
   deleteCategory(id: number) {
-    this.categoryService.deleteCategory(id).subscribe(() => {
-      this.router.navigate(['/category-list']);
-    }, e => {
-      console.log(e);
-    });
+    this.categoryService.deleteCategory(id);
+    this.router.navigate(['/category/list']);
   }
 }

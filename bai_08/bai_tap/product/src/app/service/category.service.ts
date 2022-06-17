@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Category} from '../model/category';
 import {environment} from '../../environments/environment';
+import {Product} from '../model/product';
 
 const API_URL = `${environment.apiUrl}`;
 
@@ -10,27 +11,43 @@ const API_URL = `${environment.apiUrl}`;
   providedIn: 'root'
 })
 export class CategoryService {
+  categories: Category[] = [{
+    id: 1,
+    name: 'IPhone'
+  }, {
+    id: 2,
+    name: 'Samsung',
+  }, {
+    id: 3,
+    name: 'LG',
+  }];
 
   constructor(private http: HttpClient) {
   }
 
-  getAll(): Observable<Category[]> {
+  getAll() {
     return this.http.get<Category[]>(API_URL + '/categories');
   }
 
-  saveCategory(category): Observable<Category> {
-    return this.http.post<Category>(API_URL + '/categories', category);
+  saveCategory(category) {
+    this.categories.push(category);
   }
 
-  findById(id: number): Observable<Category> {
-    return this.http.get<Category>(`${API_URL}/categories/${id}`);
+  findById(id: number) {
+    return this.categories.find(category => category.id === id);
   }
 
-  updateCategory(id: number, category: Category): Observable<Category> {
-    return this.http.put<Category>(`${API_URL}/categories/${id}`, category);
+  updateCategory(id: number, category: Category) {
+    for (let i = 0; i < this.categories.length; i++) {
+      if (this.categories[i].id === id) {
+        this.categories[i] = category;
+      }
+    }
   }
 
-  deleteCategory(id: number): Observable<Category> {
-    return this.http.delete<Category>(`${API_URL}/categories/${id}`);
+  deleteCategory(id: number) {
+    this.categories = this.categories.filter(category => {
+      return category.id !== id;
+    });
   }
 }

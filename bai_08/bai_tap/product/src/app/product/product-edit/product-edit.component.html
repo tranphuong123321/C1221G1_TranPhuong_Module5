@@ -15,9 +15,9 @@
     </tr>
     <tr>
       <td>Danh mục sản phẩm</td>
-      <td><select formControlName="category">
+      <td><select formControlName="category" [compareWith]="equals">
         <option disabled>Chọn danh mục sản phẩm</option>
-        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+        <option *ngFor="let category of categories" [ngValue]="category">{{category.name}}</option>
       </select></td>
     </tr>
     <tr>

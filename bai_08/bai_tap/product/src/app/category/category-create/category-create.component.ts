@@ -9,6 +9,7 @@ import {CategoryService} from '../../service/category.service';
 })
 export class CategoryCreateComponent implements OnInit {
   categoryForm: FormGroup = new FormGroup({
+    id: new FormControl(),
     name: new FormControl(),
   });
 
@@ -20,12 +21,8 @@ export class CategoryCreateComponent implements OnInit {
 
   submit() {
     const category = this.categoryForm.value;
-    this.categoryService.saveCategory(category).subscribe(() => {
-      this.categoryForm.reset();
-      alert('Tạo thành công');
-    }, e => {
-      console.log(e);
-    });
+    this.categoryService.saveCategory(category);
+    this.categoryForm.reset();
   }
 
 }

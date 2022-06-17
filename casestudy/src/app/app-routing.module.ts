@@ -19,14 +19,18 @@ import {CustomerEditComponent} from './CustomerModule/customer-edit/customer-edi
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', component: HomeComponent},
-  {path: 'customer', component: CustomerComponent},
-  {path: 'customer-form', component: CustomerFormComponent},
-  {path: 'customer-edit', component: CustomerEditComponent},
-  {path: 'facility', component: FacilityComponent},
-  {path: 'contract', component: ContractComponent},
-  {path: 'contract-form', component: ContractFormComponent},
-  {path: 'facility-form', component: FacilityFormComponent},
-  {path: 'facility-edit', component: FacilityEditComponent}
+  {
+    path: 'customer',
+    loadChildren: () => import('./CustomerModule/customer.module').then(module => module.CustomerModule)
+  },
+  {
+    path: 'facility',
+    loadChildren: () => import('./FacilityModule/facility.module').then(module => module.FacilityModule)
+  },
+  {
+    path: 'contract',
+    loadChildren: () => import('./ContractModule/contract.module').then(module => module.ContractModule)
+  }
 ];
 
 @NgModule({

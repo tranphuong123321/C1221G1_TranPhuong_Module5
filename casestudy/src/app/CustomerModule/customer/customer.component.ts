@@ -30,7 +30,7 @@ private loadData() {
   });
 }
   public addCustomer() {
-    this.router.navigate(['customer-form']);
+    this.router.navigate(['customer/create']);
   }
 
   public deleteCustomer() {

@@ -16,7 +16,11 @@ export class CategoryEditComponent implements OnInit {
               private activatedRoute: ActivatedRoute) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
-      this.getCategory(this.id);
+      const category = this.getCategory(this.id);
+      this.categoryForm = new FormGroup({
+        id: new FormControl(category.id),
+        name: new FormControl(category.name),
+      });
     });
   }
 
@@ -24,19 +28,12 @@ export class CategoryEditComponent implements OnInit {
   }
 
   getCategory(id: number) {
-    return this.categoryService.findById(id).subscribe(category => {
-      this.categoryForm = new FormGroup({
-        name: new FormControl(category.name),
-      });
-    });
+    return this.categoryService.findById(id);
   }
 
   updateCategory(id: number) {
     const category = this.categoryForm.value;
-    this.categoryService.updateCategory(id, category).subscribe(() => {
-      alert('Cập nhật thành công');
-    }, e => {
-      console.log(e);
-    });
+    this.categoryService.updateCategory(id, category);
+    alert('Cập nhật thành công');
   }
 }
