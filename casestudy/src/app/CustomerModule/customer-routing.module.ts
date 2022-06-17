@@ -8,7 +8,7 @@ import {CustomerEditComponent} from './customer-edit/customer-edit.component';
 const routes: Routes = [
   {path: 'list', component: CustomerComponent},
   {path: 'create', component: CustomerFormComponent},
-  {path: 'edit', component: CustomerEditComponent},
+  {path: 'edit/:id', component: CustomerEditComponent},
 ];
 
 @NgModule({

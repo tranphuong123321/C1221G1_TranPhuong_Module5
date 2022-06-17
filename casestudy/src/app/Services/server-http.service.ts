@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {throwError} from 'rxjs';
+import {Observable, throwError} from 'rxjs';
 import {Customer} from '../Model/Customer';
 import {catchError} from 'rxjs/operators';
 import {Contract} from '../Model/Contract';
@@ -18,6 +18,7 @@ export class ServerHttpService {
       // Authorization: 'Basic ' + btoa('username:password'),
     }),
   };
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -33,47 +34,61 @@ export class ServerHttpService {
     return throwError('Something bad happened; please try again later.');
   }
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
+
   public getCustomer() {
     const url = `${this.REST_API_SERVER}/customer`;
     return this.httpClient
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public addCustomer(data: Customer) {
     const url = `${this.REST_API_SERVER}/customer`;
     return this.httpClient
-      .post<any>(url, data , this.httpOptions)
+      .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public getContract() {
     const url = `${this.REST_API_SERVER}/contract`;
     return this.httpClient
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public addContract(data: Contract) {
     const url = `${this.REST_API_SERVER}/contract`;
     return this.httpClient
-      .post<any>(url, data , this.httpOptions)
+      .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public deleteCustomer(customerId: number) {
     const url = `${this.REST_API_SERVER}/customer/` + customerId;
     return this.httpClient
       .delete<any>(url)
       .pipe(catchError(this.handleError));
   }
+
   public addFacility(data: Facility) {
     const url = `${this.REST_API_SERVER}/facility`;
     return this.httpClient
-      .post<any>(url, data , this.httpOptions)
+      .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
-  public updateCustomer(customerId: number) {
+
+  public updateCustomer(customerId: number, customer: Customer): Observable<Customer> {
     const url = `${this.REST_API_SERVER}/customer/` + customerId;
     return this.httpClient
-      .put<Customer>(url)
+      .put<Customer>(url, customer)
       .pipe(catchError(this.handleError));
   }
+
+  public findById(id: number): Observable<Customer> {
+    const url = `${this.REST_API_SERVER}/customer/${id}`;
+    return this.httpClient.get<Customer>(url);
+  }
 }
+

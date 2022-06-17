@@ -32,16 +32,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
   declarations: [
     AppComponent,
     HomeComponent,
-    CustomerComponent,
-    ContractComponent,
-    CustomerFormComponent,
-    FacilityComponent,
-    FacilityFormComponent,
     HeaderComponent,
     FooterComponent,
-    FacilityEditComponent,
-    ContractFormComponent,
-    CustomerEditComponent
   ],
   imports: [
     BrowserModule,
